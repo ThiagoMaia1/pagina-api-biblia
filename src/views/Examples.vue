@@ -1,20 +1,17 @@
 <template>
   <div class='view'>
     <Header/>
-    <APIInfo/>
   </div>
 </template>
 
 <script lang="ts">
   import { Component, Vue } from 'vue-property-decorator';
   import Header from '@/components/Header/Header.vue'; 
-  import APIInfo from '@/components/APIInfo/APIInfo.vue'; 
 
   @Component({
     components: {
-      Header,
-      APIInfo
+      Header
     },
   })
-  export default class Home extends Vue {}
+  export default class Examples extends Vue {}
 </script>

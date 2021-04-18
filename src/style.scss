@@ -1,0 +1,66 @@
+* {
+    box-sizing: border-box;
+    font-family: "Source Sans Pro", Avenir, Helvetica, Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+html {
+  overflow: hidden;
+}
+
+button, input, a, textarea {
+    outline: none;
+    appearance: none;
+    background-color: initial;
+    text-decoration: none;
+    border: none;
+}
+
+$vue-color: #42b89e;
+$gradient: linear-gradient(to bottom right,rgb(137, 209, 193), $vue-color, #116e5a);
+$box-shadow: 10px 10px 8px rgba(0,0,0,0.5);
+
+*::-webkit-scrollbar {
+  width: 0.5vw;
+  left: -0.5vw;
+  height: 95%;
+}
+ 
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+ 
+*::-webkit-scrollbar-thumb {
+  background: $gradient;
+  border-radius: 100px;
+}
+
+*::-webkit-scrollbar-button {
+  width: 0;
+  height: 0;
+  display: none;
+}
+
+@mixin dislodged-border ($color, $border-radius: 0) {
+  border-radius: $border-radius;
+  position: relative;
+  &:before {
+    border: 2px solid $color;
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    border-radius: $border-radius;
+    // z-index: -1;
+  }
+}
+
+.view {
+  overflow: hidden;
+}
