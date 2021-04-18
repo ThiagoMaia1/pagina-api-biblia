@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class='container'>
         <div>
             <router-link :to="path" :class="path === $route.path ? 'selected' : ''">{{label}}</router-link>
         </div>
@@ -24,7 +24,7 @@
         color: $vue-color;
         border-radius: 100px;
         padding: 0.4em 0.7em;
-        font-size: 1.5em;
+        font-size: 1.4em;
         margin-right: 0.5em;
         transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
     }
@@ -32,10 +32,10 @@
         background-color: $vue-color;
         color: white;
     }
-    div:hover > div {
+    .container:hover > div {
         transform: rotateZ(-2deg);
     }
-    div > div {
+    .container > div {
         transition: transform 0.2s ease-in-out;
         transform: rotateZ(0deg);
         transform-origin: left bottom;

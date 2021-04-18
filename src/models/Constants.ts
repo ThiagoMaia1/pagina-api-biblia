@@ -1,0 +1,1 @@
+export const URL_API = 'http://apibibliahumana-env.eba-3nbmrphf.us-east-2.elasticbeanstalk.com/'

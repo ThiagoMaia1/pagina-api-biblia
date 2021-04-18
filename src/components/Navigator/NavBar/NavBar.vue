@@ -1,35 +1,52 @@
 <template>
     <nav>
-        <NavBarButton v-for="r in routes" :key="r.path" :label="r.name" :path="r.path"/>
+        <Logo/>
+        <div class='vertical-line'/>
+        <div>
+            <NavBarButton v-for="r in routes" :key="r.path" :label="r.name" :path="r.path"/>
+        </div>
     </nav>
 </template>
 
 <script lang='ts'>
     import NavBarButton from './NavBarButton.vue'
+    import Logo from '@/components/Logo.vue'
     import { Component, Vue } from 'vue-property-decorator'
-    import { RouteConfig } from 'vue-router'
     import {routes} from '@/router/index'
 
     @Component({
-        components: {NavBarButton}
+        components: {
+            NavBarButton,
+            Logo
+        }
     })
     class NavBar extends Vue {
-        data() : {routes : Array<RouteConfig>} {
+        data() {
             return {
-                routes
+                routes: routes.filter(r => !r.redirect)
             }
         }
     }
     export default NavBar
 </script>
 
-<style>
+<style lang='scss'>
     nav {
-        padding-top: 3vh;
+        padding: 0 2vw 0 8vw;
+        margin-top: 6vh;
         width: 100%;
         display: flex;
-        justify-content: flex-end;
-        max-height: 15vh;
+        justify-content: space-between;
+        align-items: center;
+        height: 15vh;
+        > div {
+            display: flex;
+            justify-content: flex-end;
+        }
+        .vertical-line {
+            width: 1px;
+            height: 80%;
+            background: lightgray;
+        }
     }
-
 </style>

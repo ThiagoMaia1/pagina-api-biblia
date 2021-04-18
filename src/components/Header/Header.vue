@@ -1,28 +1,31 @@
 <template>
     <header>
-        <img src="../../assets/BookBench.svg"/>
+        <img :src="require(`@/assets/${imageUri}`)"/>
         <!-- <GradientCircle/> -->
         <div class='api-title'>
-            <h1>{{$t('app.title')}}</h1>
-            <span>{{$t('header.subtitle')}}</span>
+            <h1>{{title}}</h1>
+            <span>{{subtitle}}</span>
         </div>
     </header>
 </template>
 
 <script lang='ts'>
-    import { Component, Vue } from 'vue-property-decorator'
+    import { Component, Prop, Vue } from 'vue-property-decorator'
     import GradientCircle from '@/components/GradientCircle.vue'
 
     @Component({
         components: {GradientCircle}
     })
     export default class Header extends Vue {
+        @Prop({required: true}) readonly imageUri !: string
+        @Prop({default: ''}) readonly title !: string
+        @Prop({default: ''}) readonly subtitle !: string
     }
 </script>
 
 <style scoped>
     header {
-        height: 85vh;
+        height: 79vh;
         width: 100vw;
         position: relative;
         padding: 1vh;

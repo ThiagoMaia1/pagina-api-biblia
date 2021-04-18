@@ -18,6 +18,15 @@ const ptMessages = {
     },
     apiInfo: {
         main: 'O @:app.title é um API rest capaz de entender referências bíblicas escritas de uma forma não rígida, na linguagem natural em que pessoas escrevem as referências, com diferentes convenções e caracteres de separação. Além disso, ele é capaz de ler mútiplas referências combinadas, para que os usuários possam pesquisar textos bíblicos de maneira rápida e sem dor de cabeça.'
+    },
+    tryOut: {
+        tryItOut: 'Experimente o API',
+        inputReferencePlaceholder: 'Digite uma referência bíblica',
+        copy: 'Copiar',
+        copied: 'Copiado!',
+    },
+    examples: {
+        subtitle: 'Veja como tirar o máximo de proveito do API'
     }
 }
 
@@ -36,6 +45,15 @@ const enMessages = {
     },
     apiInfo: {
         main: 'The @:app.title is a RESTful API capable of understanding bible references written in a non-rigid way, in natural language as people usually write references, with different conventions and separator characters. It is also capable of reading multiple chained references, to allow users to search bible texts fast and with no headache.'
+    },
+    tryOut: {
+        tryItOut: 'Test the API',
+        inputReferencePlaceholder: 'Type in a bible reference',
+        copy: 'Copy',
+        copied: 'Copied!',
+    },
+    examples: {
+        subtitle: 'See how you can use the API to it\'s max'
     }
 }
 

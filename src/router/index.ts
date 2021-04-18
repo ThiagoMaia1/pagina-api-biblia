@@ -19,17 +19,25 @@ export const routesPath = [
   {id: 'help', component: Help},
 ]
 
-export const routes: Array<RouteConfig> = routesPath.map(r => ({
+export const routes : Array<RouteConfig> = routesPath.map(r => ({
     path: '/' + r.id,
     name: String(i18n.t(`navbar.${r.id}`)),
     component: r.component,
     meta: getMeta(r.id)
 }))
 
+routes.push({path: '/', redirect: '/home'});
+
 const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
   routes
 })
+
+router.afterEach(to => {
+  Vue.nextTick(() => {
+    document.title = to?.meta.title ?? i18n.t('app.title');
+  });
+});
 
 export default router

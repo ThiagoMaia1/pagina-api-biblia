@@ -1,0 +1,48 @@
+<template>
+    <section>
+        <h2>{{$t('tryOut.tryItOut')}}</h2>
+        <div class='input-container' v-on:click="() => $refs.input.focus()">
+            <span>{{URL_API + service}}</span>
+            <input ref="input" type="text" v-model="reference" :placeholder="$t('tryOut.inputReferencePlaceholder')">
+        </div>
+        <APICaller :query="service + reference"/>
+    </section>
+</template>
+
+<script lang='ts'>
+    import {Component, Vue} from 'vue-property-decorator'
+    import APICaller from '@/components/JsonBox/APICaller.vue'
+    import {URL_API} from '@/models/Constants'
+
+    @Component({
+        components: {APICaller}
+    })
+    export default class TryOutAPI extends Vue {
+        service = 'texto/'
+        reference = ''
+        URL_API = URL_API
+    }
+</script>
+
+<style lang="scss" scoped>
+    .input-container {
+        border-radius: 5px;
+        border: 1px lightgray solid;
+        margin: 0 auto;
+        width: max-content;
+        padding: 0 1em;
+        > span {
+            color: rgb(179, 179, 179);
+            cursor: pointer;
+            user-select: none;
+        }
+        > * {
+            font-size: 120%;
+            padding: 0.5em 0;
+        }
+        input {
+            width: 20em;
+            height: 100%;
+        }
+    }
+</style>
