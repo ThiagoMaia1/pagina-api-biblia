@@ -10,12 +10,15 @@
     @Component({
         components: {JsonBox},
         watch: {
-            query() {
-                clearTimeout(this.$data.queryTimeout);
-                this.$data.queryTimeout = setTimeout(() => 
-                    fetch(URL_API + this.$props.query)
-                        .then(async result => this.$data.jsonData = await result.json())
-                , this.$props.timeout)
+            query: {
+                immediate: true,
+                handler(to) {
+                    clearTimeout(this.$data.queryTimeout);
+                    this.$data.queryTimeout = setTimeout(() => 
+                        fetch(URL_API + to)
+                            .then(async result => this.$data.jsonData = await result.json())
+                    , this.$props.timeout)
+                }
             }
         }
     })
@@ -26,6 +29,3 @@
         queryTimeout = setTimeout(() => 0, 0);
     }
 </script>
-
-<style lang="scss" scoped>
-</style>

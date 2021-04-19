@@ -1,14 +1,11 @@
 <template>
-    <div class='json-box-container'>
-        <JsonViewer 
-            theme='json-box'
-            :value="jsonData"
-            :expand-depth=5
-            :copyText="{copyText: $t('tryOut.copy'), copiedText: $t('tryOut.copied')}"
-            copyable
-            expanded
-            sort/>
-    </div>  
+    <JsonViewer 
+        theme='json-box'
+        :value="jsonData"
+        :expand-depth=5
+        :copyable="{copyText: $t('tryOut.copy'), copiedText: $t('tryOut.copied')}"
+        expanded
+        sort/>
 </template>
 
 <script lang='ts'>
@@ -24,10 +21,8 @@
 </script>
 
 <style lang="scss">
-    .json-box-container {
-        padding: 5vh 10vw;
-    }
     .json-box {
+        width: 100%;
         background: #fff;
         height: 70vh;
         white-space: nowrap;
@@ -66,7 +61,8 @@
             text-align: center;
         }
         .jv-key { 
-            color: #111111;
+            color: #929292;
+            font-weight: 800;
             &::after {
                 content: " ";
             }    

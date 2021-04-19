@@ -1,11 +1,13 @@
 <template>
     <section>
-        <h2>{{$t('tryOut.tryItOut')}}</h2>
-        <div class='input-container' v-on:click="() => $refs.input.focus()">
-            <span>{{URL_API + service}}</span>
-            <input ref="input" type="text" v-model="reference" :placeholder="$t('tryOut.inputReferencePlaceholder')">
+        <div class='column'>
+            <h2>{{$t('tryOut.tryItOut')}}</h2>
+            <div class='input-container' v-on:click="() => $refs.input.focus()">
+                <span>{{URL_API + service}}</span>
+                <input ref="input" type="text" v-model="reference" :placeholder="$t('tryOut.inputReferencePlaceholder')">
+            </div>
+            <APICaller :query="service + reference"/>
         </div>
-        <APICaller :query="service + reference"/>
     </section>
 </template>
 
@@ -25,10 +27,23 @@
 </script>
 
 <style lang="scss" scoped>
+    section {
+        width: 100%;
+    }
+    .column {
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: min-content;
+        > * {
+            margin-bottom: 1.5em;
+        }
+    }
     .input-container {
         border-radius: 5px;
         border: 1px lightgray solid;
-        margin: 0 auto;
+        // margin: 0 auto;
         width: max-content;
         padding: 0 1em;
         > span {

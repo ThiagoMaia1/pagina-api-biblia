@@ -29,6 +29,7 @@
         }
         img {
             height: 100%;
+            filter: drop-shadow(4px 3px 2px rgba(0,0,0,0.3));
         }
     }
 </style>
