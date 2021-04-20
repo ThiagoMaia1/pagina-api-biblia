@@ -25,9 +25,15 @@ const ptMessages = {
         copy: 'Copiar',
         copied: 'Copiado!',
     },
+    documentation: {
+        subtitle: 'Leia a documentação completa'
+    },
     examples: {
         subtitle: 'Veja como tirar o máximo de proveito do API'
-    }
+    },
+    help: {
+        subtitle: 'Ficou com alguma dúvida? Pergunte!'
+    },
 }
 
 const enMessages = {
@@ -52,9 +58,15 @@ const enMessages = {
         copy: 'Copy',
         copied: 'Copied!',
     },
+    documentation: {
+        subtitle: 'Read the full documentation'
+    },
     examples: {
         subtitle: 'See how you can use the API to it\'s max'
-    }
+    },
+    help: {
+        subtitle: 'Have any doubts? Ask!'
+    },
 }
 
 const messages : Record<string, typeof ptMessages> = {
