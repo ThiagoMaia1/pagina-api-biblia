@@ -1,6 +1,6 @@
 <template>
   <div class='view'>
-    <Header/>
+    <Header imageUri="Helping.svg" :title="$t('navbar.help')" :subtitle="$t('help.subtitle')"/>
   </div>
 </template>
 

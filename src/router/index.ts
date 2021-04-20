@@ -14,8 +14,8 @@ const getMeta = (route : string) => ({
 
 export const routesPath = [
   {id: 'home', component: Home},
-  {id: 'documentation', component: Documentation},
   {id: 'examples', component: Examples},
+  {id: 'documentation', component: Documentation},
   {id: 'help', component: Help},
 ]
 

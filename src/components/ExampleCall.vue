@@ -30,10 +30,13 @@
     section {
         padding: 2.5em 0;
         &.background {
-            background-color: rgb(247, 247, 247);
-            // background-color: #ffffff;
-            // opacity: 1;
-            // background-image:  repeating-radial-gradient( circle at 50% 50%, transparent 0, #ffffff 30px ), repeating-linear-gradient( #c6e9e155, #c6e9e1 );    
+            background: $gradient;
+            // color: white;
+        //     background-color: rgb(247, 247, 247);
+        //    background-color: #ffffff;
+        //     opacity: 1;
+        //     background: radial-gradient(circle, transparent 20%, #ffffff 20%, #ffffff 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #ffffff 20%, #ffffff 80%, transparent 80%, transparent) 10px 10px, linear-gradient(#dcfae3 0.8px, transparent 0.8px) 0 -0.4px, linear-gradient(90deg, #dcfae3 0.8px, #ffffff 0.8px) -0.4px 0;
+        //     background-size: 20px 20px, 20px 20px, 10px 10px, 10px 10px;
         }
         h3 {
             text-align: left;
@@ -52,6 +55,8 @@
             align-items: center;
             font-size: 1.1em;
             .query {
+                background-color: white;
+                color: initial;
                 font-family: Consolas;
                 padding: 1em;
                 margin: 0 2em;

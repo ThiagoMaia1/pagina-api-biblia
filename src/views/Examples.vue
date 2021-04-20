@@ -1,11 +1,11 @@
 <template>
   <div class='view'>
-    <Header imageUri="Library.svg" :title="$t('navbar.examples')" :subtitle="$t('examples.subtitle')"/>
+    <Header imageUri="LibraryWoman.svg" :title="$t('navbar.examples')" :subtitle="$t('examples.subtitle')"/>
     <ExampleCall v-for="(e, i) in examples" 
       :key="e.description" 
       :query="e.query" 
       :description="e.description"
-      :hasBackground="i % 2 === 0"  
+      :hasBackground="i % 2 !== 0"  
     />
   </div>
 </template>
