@@ -5,6 +5,7 @@
       <transition name='slide'>
         <router-view/>
       </transition>
+      <Footer/>
     </div>
   </div>
 </template>
@@ -12,12 +13,16 @@
 <script lang='ts'>
   import {Component, Vue} from 'vue-property-decorator'
   import NavBar from '@/components/Navigator/NavBar/NavBar.vue'
+  import Footer from '@/components/Footer/Footer.vue'
   import { routesPath } from '@/router/index'
   import { Route } from 'node_modules/vue-router/types/router';
   const routes = routesPath.map(r => '/' + r.id);
 
   @Component({
-      components: {NavBar},
+      components: {
+        NavBar,
+        Footer,
+      },
       watch: {
       $route(to : Route, from : Route) {
         console.log({to, from});
