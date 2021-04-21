@@ -1,5 +1,5 @@
 <template>
-  <div class='view'>
+  <div class='view' id='home'>
     <Header imageUri='BookBench.svg' :title="$t('app.title')" :subtitle="$t('header.subtitle')"/>
     <APIInfo/>
     <TryOutAPI/>
@@ -21,3 +21,11 @@
   })
   export default class Home extends Vue {}
 </script>
+
+<style lang='scss'>
+  #home {
+    img {
+      left: 3vw;
+    }
+  }
+</style>

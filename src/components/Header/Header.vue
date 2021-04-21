@@ -31,8 +31,8 @@
         padding: 1vh;
     }
     img {
-        left: 2vw;
-        bottom: 4vh;
+        left: 10vw;
+        bottom: 6vh;
         position: absolute;
         height: 60vh;
         object-fit: contain;

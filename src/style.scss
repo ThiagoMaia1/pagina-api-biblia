@@ -57,10 +57,14 @@ $box-shadow: 10px 10px 8px rgba(0,0,0,0.5);
     top: 15px;
     left: 15px;
     border-radius: $border-radius;
-    // z-index: -1;
   }
 }
 
 .view {
   overflow: hidden;
+}
+
+::selection {
+  background: #2c3e50;
+  color: white;
 }
