@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "api-biblia-humana"
+  },
+  "targets": {
+    "api-biblia-humana": {
+      "hosting": {
+        "bibliaparahumanos": [
+          "bibliaparahumanos"
+        ]
+      }
+    }
   }
 }

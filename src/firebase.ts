@@ -1,12 +1,11 @@
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 
-import * as firebase from 'firebase/app';
-import "firebase/auth";
-import "firebase/firestore";
-import "firebase/functions";
+import firebase from "firebase/app";
+import "@firebase/functions";
+import '@firebase/analytics';
 
-var firebaseConfig = {
+const firebaseConfig = {
     apiKey: "AIzaSyA-ndReDUU5QvnpZYkyemEU6cl0n691FPI",
     authDomain: "api-biblia-humana.firebaseapp.com",
     projectId: "api-biblia-humana",
