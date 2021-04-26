@@ -10,7 +10,10 @@
 
 <script lang='ts'>
     import {Component, Vue, Prop} from 'vue-property-decorator'
+    /* eslint-disable */
+    // @ts-ignore
     import JsonViewer from 'vue-json-viewer'
+    /* eslint-enable */
 
     @Component({
         components: {JsonViewer}

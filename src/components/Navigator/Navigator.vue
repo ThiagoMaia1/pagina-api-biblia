@@ -25,7 +25,6 @@
       },
       watch: {
       $route(to : Route, from : Route) {
-        console.log({to, from});
         this.$data.direction = routes.indexOf(to.path) > routes.indexOf(from.path) ? 1 : -1;
       }
     }

@@ -18,6 +18,8 @@
     import 'vue-awesome/icons/brands/facebook-square'
     import 'vue-awesome/icons/envelope'
     import 'vue-awesome/icons/brands/stack-overflow'
+    import 'vue-awesome/icons/remove-format'
+    import i18n from '@/translations'
 
     type Link = {
         logo : string;
@@ -32,7 +34,7 @@
     })
     export default class ContactInfo extends Vue {
         links : Link[] = [
-            {logo: '', apelido: 'Desenvolvido por Thiago Pereira Maia', url: portfolioUrl},
+            {logo: 'remove-format', apelido: i18n.tc('app.developedBy'), url: portfolioUrl},
             {logo: 'brands/github', apelido: 'GitHub', url: gitHubUrl},
             {logo: 'brands/linkedin', apelido: 'LinkedIn', url: linkedinUrl},
             {logo: 'brands/stack-overflow', apelido: 'Stack Overflow', url: stackOverflowUrl},

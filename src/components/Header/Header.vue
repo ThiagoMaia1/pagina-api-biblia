@@ -1,7 +1,6 @@
 <template>
     <header>
         <img :src="require(`@/assets/${imageUri}`)"/>
-        <!-- <GradientCircle/> -->
         <div class='api-title'>
             <h1>{{title}}</h1>
             <span>{{subtitle}}</span>

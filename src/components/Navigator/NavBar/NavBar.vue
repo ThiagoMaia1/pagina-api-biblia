@@ -13,6 +13,7 @@
     import Logo from '@/components/Logo.vue'
     import { Component, Vue } from 'vue-property-decorator'
     import {routes} from '@/router/index'
+    import { RouteConfig } from 'node_modules/vue-router/types/router'
 
     @Component({
         components: {
@@ -21,7 +22,7 @@
         }
     })
     class NavBar extends Vue {
-        data() {
+        data() : {routes : RouteConfig[]} {
             return {
                 routes: routes.filter(r => !r.redirect)
             }
