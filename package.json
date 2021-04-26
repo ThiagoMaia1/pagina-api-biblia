@@ -11,6 +11,7 @@
   "dependencies": {
     "@types/node": "^14.14.41",
     "core-js": "^3.6.5",
+    "firebase": "^8.4.2",
     "vue": "^2.6.11",
     "vue-awesome": "^4.1.0",
     "vue-class-component": "^7.2.3",
