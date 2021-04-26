@@ -12,9 +12,8 @@
 
 <style scoped lang='scss'>
     @import '@/style.scss';
-    $size: calc(5*min(1vh, 1vw));
+    $size: calc(2*min(1vh, 1vw));
     div {
-        position: absolute;
         width: $size;
         height: $size;
         background: $gradient;
