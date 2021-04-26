@@ -12,16 +12,34 @@ html {
 }
 
 button, input, a, textarea {
-    outline: none;
-    appearance: none;
-    background-color: initial;
-    text-decoration: none;
-    border: none;
+  outline: none;
+  appearance: none;
+  background-color: initial;
+  text-decoration: none;
+  border: none;
+  resize: none;
+  font-family: inherit;
 }
+
 
 $vue-color: #42b89e;
 $gradient: linear-gradient(to bottom right,rgb(137, 209, 193), $vue-color, #116e5a);
 $box-shadow: 10px 10px 8px rgba(0,0,0,0.5);
+
+button {
+  background: $gradient;
+  color: white;
+  font-size: 1.2em;
+  font-weight: bold;
+  padding: 0.8em 1.5em;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+  transform: rotateZ(0deg);
+  &:hover {
+    transform: rotateZ(-3deg);
+  }
+}
 
 *::-webkit-scrollbar {
   width: 0.5vw;

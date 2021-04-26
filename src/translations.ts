@@ -6,6 +6,7 @@ Vue.use(VueI18n)
 const ptMessages = {
     app: {
         title: 'API Bíblia para Humanos', 
+        developedBy: 'Desenvolvido por Thiago Maia',
     },
     navbar : {
         home: 'Início',
@@ -29,16 +30,25 @@ const ptMessages = {
         subtitle: 'Leia a documentação completa'
     },
     examples: {
-        subtitle: 'Veja como tirar o máximo de proveito do API'
+        subtitle: 'Veja como tirar o máximo de proveito do API',
+        result: 'Resultado',
+        query: 'Requisição',
     },
     help: {
-        subtitle: 'Ficou com alguma dúvida? Pergunte!'
+        subtitle: 'Ficou com alguma dúvida? Pergunte!',
+        sectionTitle: 'Enviar Mensagem',
+        email: {
+            content: 'Faça sua pergunta ou sugestão',
+            send: 'Enviar',
+        },
+        github: 'Ou abra um problema no GitHub'
     },
 }
 
 const enMessages = {
     app: {
-        title: 'Bible API for Humans'
+        title: 'Bible API for Humans',
+        developedBy: 'Developed by Thiago Maia',
     },
     navbar : {
         home: 'Home',
@@ -62,10 +72,18 @@ const enMessages = {
         subtitle: 'Read the full documentation'
     },
     examples: {
-        subtitle: 'See how you can use the API to it\'s max'
+        subtitle: 'See how you can use the API to it\'s max',
+        result: 'Result',
+        query: 'Query',
     },
     help: {
-        subtitle: 'Have any doubts? Ask!'
+        subtitle: 'Have any doubts? Ask!',
+        sectionTitle: 'Send Message',
+        email: {
+            content: 'Make your question or suggestion',
+            send: 'Send',
+        },
+        github: 'Or open and issue on GitHub'
     },
 }
 
