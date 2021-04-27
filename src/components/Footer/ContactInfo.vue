@@ -2,7 +2,7 @@
      <div class='items-container'>
         <div v-for="l in links" class='bottom-bar-link-container' :key="l.url">
             <a :href="l.url" target='_blank' rel='noopener noreferrer'>
-                <Icon :name="l.logo"/>
+                <Icon v-if="l.logo" :name="l.logo"/>
                 <span>{{l.apelido}}</span>
             </a>
         </div>
@@ -18,7 +18,6 @@
     import 'vue-awesome/icons/brands/facebook-square'
     import 'vue-awesome/icons/envelope'
     import 'vue-awesome/icons/brands/stack-overflow'
-    import 'vue-awesome/icons/remove-format'
     import i18n from '@/translations'
 
     type Link = {
@@ -34,7 +33,7 @@
     })
     export default class ContactInfo extends Vue {
         links : Link[] = [
-            {logo: 'remove-format', apelido: i18n.tc('app.developedBy'), url: portfolioUrl},
+            {logo: '', apelido: i18n.tc('app.developedBy'), url: portfolioUrl},
             {logo: 'brands/github', apelido: 'GitHub', url: gitHubUrl},
             {logo: 'brands/linkedin', apelido: 'LinkedIn', url: linkedinUrl},
             {logo: 'brands/stack-overflow', apelido: 'Stack Overflow', url: stackOverflowUrl},

@@ -10,7 +10,9 @@
                 <label for='content'>{{$t('help.email.content')}}</label>
                 <textarea id='content' v-model="content"/>
             </div>
-            <button v-show="content && isValidEmail" v-on:click="sendMessage()">{{$t('help.email.send')}}</button>
+            <div class='button-container'>
+                <button v-show="content && isValidEmail" v-on:click="sendMessage()">{{$t('help.email.send')}}</button>
+            </div>
         </div>
         <a id='create-github-issue' href='https://github.com/ThiagoMaia1/api-biblia/issues' rel='noopener noreferrer' target='_blank'>
             <span>{{$t('help.github')}}</span>
@@ -65,6 +67,12 @@
             display: flex;
             justify-content: flex-end;
             margin-bottom: 1.5em;
+        }
+        .button-container {
+            height: 15vh;
+            width: 100vw;
+            justify-content: center;
+            align-items: center;
         }
         label {
             width: 20vw;
