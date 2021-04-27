@@ -3,6 +3,7 @@
         <div class='column'>
             <h2>{{$t('tryOut.tryItOut')}}</h2>
             <div class='input-container' v-on:click="() => $refs.input.focus()">
+                <CopyButton :copyValue="URL_API + service + reference"/>
                 <span>{{URL_API + service}}</span>
                 <input ref="input" type="text" v-model="reference" :placeholder="$t('tryOut.inputReferencePlaceholder')">
             </div>
@@ -15,9 +16,10 @@
     import {Component, Vue} from 'vue-property-decorator'
     import APICaller from '@/components/JsonBox/APICaller.vue'
     import {URL_API} from '@/models/Constants'
+    import CopyButton from '@/components/CopyButton.vue'
 
     @Component({
-        components: {APICaller}
+        components: {APICaller, CopyButton}
     })
     export default class TryOutAPI extends Vue {
         service = 'texto/'
@@ -43,7 +45,8 @@
     .input-container {
         border-radius: 5px;
         border: 1px lightgray solid;
-        // margin: 0 auto;
+        display: flex;
+        align-items: center;
         width: max-content;
         padding: 0 1em;
         > span {
