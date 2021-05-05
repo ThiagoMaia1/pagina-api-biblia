@@ -9,7 +9,10 @@
                 <span class='description'>{{description}}</span>
                 <div class='query-container'>
                     <h3>{{$t('examples.query')}}</h3>
-                    <span class='query'>{{query}}</span>
+                    <div class='query'>
+                        <CopyButton :copyValue="URL_API + query"/>
+                        <span>{{query}}</span>
+                    </div>
                 </div>
             </div>
             <div class='divider'/>
@@ -24,16 +27,23 @@
 <script lang='ts'>
     import {Component, Prop, Vue} from 'vue-property-decorator'
     import APICaller from '@/components/JsonBox/APICaller.vue'
+    import CopyButton from '@/components/CopyButton.vue'
     import GradientCircle from '@/components/GradientCircle.vue'
+    import {URL_API} from '@/models/Constants'
 
     @Component({
-        components: {APICaller, GradientCircle}
+        components: {
+            APICaller, 
+            GradientCircle, 
+            CopyButton,
+        }
     })
     export default class ExampleCall extends Vue {
         @Prop({required: true}) readonly title !: string 
         @Prop({required: true}) readonly query !: string 
         @Prop({required: true}) readonly description !: string 
         @Prop({default: false}) readonly hasBackground !: boolean
+        URL_API = URL_API
     }
 </script>
 
@@ -83,6 +93,9 @@
             align-items: center;
             font-size: 1.1em;
             flex: 0 0 30%;
+            .description {
+                text-align: justify;
+            }
             .query-container {
                 width: 100%;
                 h3 {
@@ -93,11 +106,12 @@
                 background-color: white;
                 color: initial;
                 font-family: Consolas;
-                padding: 1em;
-                margin: 0 2em;
+                padding: 0.5em 1.4em 0.5em 0.8em;
                 min-width: max-content;
                 border-radius: 5px;
                 border: 1px lightgray solid;
+                display: inline-flex;
+                align-items: center;
             }
         }
         > * {

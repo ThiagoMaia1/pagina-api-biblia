@@ -9,6 +9,7 @@ body, input {
 
 html {
   overflow: hidden;
+  background-color: white;
 }
 
 button, input, a, textarea {
@@ -23,6 +24,7 @@ button, input, a, textarea {
 
 
 $vue-color: #42b89e;
+$vue-dark-color: #2c3e50;
 $gradient: linear-gradient(to bottom right,rgb(137, 209, 193), $vue-color, #116e5a);
 $box-shadow: 10px 10px 8px rgba(0,0,0,0.5);
 
@@ -83,6 +85,6 @@ button {
 }
 
 ::selection {
-  background: #2c3e50;
+  background: $vue-dark-color;
   color: white;
 }

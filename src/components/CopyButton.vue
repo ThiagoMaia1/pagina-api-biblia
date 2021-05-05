@@ -37,7 +37,7 @@
         border-radius: 100px;
         margin-right: 1em;
         transition: all 0.5s ease-in-out;
-        display: flex;
+        display: inline-flex;
         flex-direction: column;
         justify-content: center;
         padding: 0.5em !important;
