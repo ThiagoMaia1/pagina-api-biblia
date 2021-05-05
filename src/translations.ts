@@ -33,6 +33,18 @@ const ptMessages = {
         subtitle: 'Veja como tirar o máximo de proveito do API',
         result: 'Resultado',
         query: 'Requisição',
+        exampleInfo: [
+            ['Serviços', 'Você pode obter a lista de serviços fornecidos.'],
+            ['Versões', 'Bem como a lista de versões da bíblia disponíveis no API.'],
+            ['Texto Formatado', 'Você pode escrever o nome do livro completo com capítulo e intervalo de versículos.'],
+            ['Definir Versão', 'Você pode definir a versão do texto (por padrão é NVI).'],
+            ['Abreviação', 'Também pode escrever o nome do livro de forma abreviada.'],
+            ['Escrita Aproximada', 'Ou até errada (dentro do razoável).'],
+            ['Referências Encadeadas', 'Você pode incluir várias referências na mesma chamada. A separação de capítulo e versículo pode ser por ponto (.) ou dois pontos (:), e a separação de referências pode ser por vírgula (,) ou ponto e vírgula (;).'],
+            ['Versículos Não Contínuos', 'Quando duas referências são do mesmo livro ou capítulo, você pode omitir o nome do livro ou capítulo das referências seguintes.'],
+            ['Referências Inválidas', 'Se uma das referências for inválida, isso não atrapalha o restante do resultado.'],
+        ],
+        
     },
     help: {
         subtitle: 'Ficou com alguma dúvida? Pergunte!',
@@ -75,6 +87,17 @@ const enMessages = {
         subtitle: 'See how you can use the API to it\'s max',
         result: 'Result',
         query: 'Query',
+        exampleInfo: [
+            ['Services', 'You can get the list of services provided.'],
+            ['Versions', 'As well as the list of bible versions available.'],
+            ['Formatted Text', 'You can write the book\'s whole name with chapter and verse.'],
+            ['Define Version', 'You can set the bible version (default is NIV).'],
+            ['Abbreviations', 'You may also write the book\'s name in an abbreviated way.'],
+            ['Approximate Spelling', 'Or even mispell it (within a reasonable margin).'],
+            ['Chained References', 'You may include multiple references in a single call. The separator for chapter and verse may be a dot (.) or a colon (:), and the separator for multiple references may be a comma (,) or a semi-colon (;).'],
+            ['Non-Continuous Verses', 'When two chained references are for the same book or chapter, you can ommit the book or chapter for the following references.'],
+            ['Invalid References', 'If one of the references is invalid, that doesn\'t invalidate the remainder of the request.'],
+        ]
     },
     help: {
         subtitle: 'Have any doubts? Ask!',
@@ -92,10 +115,8 @@ const messages : Record<string, typeof ptMessages> = {
     'en': enMessages
 }
 
-export const i18n = new VueI18n({
+export default new VueI18n({
     locale: navigator.language.split('-')[0],
     messages,
     fallbackLocale: 'en',
 })
-
-export default i18n;
