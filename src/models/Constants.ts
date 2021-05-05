@@ -1,4 +1,4 @@
-export const URL_API = 'http://apibibliahumana-env.eba-3nbmrphf.us-east-2.elasticbeanstalk.com/'
+export const URL_API = 'https://www.bibliaparahumanos.tk/'
 export const emailAddress = 'tthiagopmaia@gmail.com';
 export const gitHubUrl = 'https://github.com/ThiagoMaia1';
 export const facebookUrl = 'https://www.facebook.com/thiago.p.maia/';
